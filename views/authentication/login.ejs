@@ -1,0 +1,40 @@
+<% include ../partials/loginheader %>
+<!--<div class="container">-->
+<!--<h3>Login</h3>-->
+<!--<form action="/login" method="POST">-->
+<!--    <input type="text" name ="username" placeholder="Username">-->
+<!--    <input type="password" name="password" placeholder="Password">-->
+<!--    <button>Login !!</button>-->
+<!--</form>-->
+<!--<a href="/register">register here</a>-->
+<!--</div>-->
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Sign In </h2>
+    <a href="/register"><h2 class="inactive underlineHover">Sign Up </h2></a>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://image.flaticon.com/icons/svg/236/236832.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" method="POST">
+      <i class="fas fa-user fa-2x"></i>
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username" required>
+      <br>
+      <i class="fas fa-lock fa-2x"></i>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+      <button class="fadeIn fourth btn btn-lg btn-primary">Log In</button>
+      <!--<input type="submit" class="fadeIn fourth" value="Log In">-->
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+<% include ../partials/footer %>
