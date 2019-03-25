@@ -1,3 +1,4 @@
+
 var loader;
 function loadNow(opacity){
     if(opacity<=0){
@@ -17,4 +18,4 @@ document.getElementById('content').style.display='block';
 document.addEventListener("DOMContentLoaded",()=>{
     loader=document.getElementById('loader');
     loadNow(1);
-})
+});

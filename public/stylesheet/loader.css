@@ -6,3 +6,12 @@
    overflow: visible;
    background: #fff url('../images/Wedges-3s-108px.gif') no-repeat center center;
 }
+
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+   overflow: visible;
+   background: #fff url('../images/Wedges-3s-108px.gif') no-repeat center center;
+}
