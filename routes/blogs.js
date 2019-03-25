@@ -76,7 +76,7 @@ blogsRoutes.put("/:id",(req,res)=>{
 });
 
 //DISTROY Blog ROUTE
-blogsRoutes.delete("/:id",middleware.giveCommentsAuthorization,(req,res)=>{
+blogsRoutes.delete("/:id",middleware.giveBlogAuthorization,(req,res)=>{
 blogsModel.findByIdAndRemove(req.params.id,(err,removeBlogs)=>{
         if(err){
             res.redirect("/blogs");

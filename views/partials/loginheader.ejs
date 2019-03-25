@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Home</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -8,8 +11,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel ="stylesheet" href="/stylesheet/style.css">
         <link rel ="stylesheet" href="/stylesheet/login.css">
+        <link rel ="stylesheet" href="/stylesheet/loader.css">
+
     </head>
     <body>
+      <div id="loader"></div>
+      <div id="content">
      <nav class="navbar navbar-inverse">
          <div class="container-fluid">
              <div class="navbar-header">
@@ -48,3 +55,26 @@
           </div>
        <% } %>
      </div>
+    </div>
+     <script>
+        var loader;
+  function loadNow(opacity){
+      if(opacity<=0){
+          displayContent();
+      }else{
+          loader.style.opacity= opacity;
+          window.setTimeout(function(){
+              loadNow(opacity-0.05);
+          },200);
+      }
+  }
+  function displayContent(){
+  loader.style.display='none';
+  document.getElementById('content').style.display='block';
+  }
+  
+  document.addEventListener("DOMContentLoaded",()=>{
+      loader=document.getElementById('loader');
+      loadNow(1);
+  })
+      </script>
