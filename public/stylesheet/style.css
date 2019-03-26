@@ -3,6 +3,13 @@ body{
     font-family: 'Righteous', cursive;
 font-family: 'Bitter', serif;
 }
+
+#headerimg{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
 .thumbnail img {
     width: 100%;
 }
