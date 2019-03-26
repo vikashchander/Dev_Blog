@@ -24,7 +24,7 @@ oauthRoutes.post("/register",(req,res)=>{
             res.render('authentication/register');
         }
         passport.authenticate("local")(req,res,()=>{
-            req.flash("success","Welcome to DevBlog"+user.username);
+            req.flash("success","Welcome to DevBlog "+user.username);
             res.redirect('/blogs');
         });
     });

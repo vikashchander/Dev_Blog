@@ -1,6 +1,6 @@
 const blogsRoutes = require("express").Router(),
-  blogsModel= require("../models/blogs"),
-  middleware  = require("../middleware");
+  blogsModel    = require("../models/blogs"),
+  middleware    = require("../middleware");
   
 blogsRoutes.get("/",(req,res)=>{
     console.log(req.user);
@@ -81,7 +81,7 @@ blogsModel.findByIdAndRemove(req.params.id,(err,removeBlogs)=>{
         if(err){
             res.redirect("/blogs");
         }else{
-            res.redirect("/blogs");
+            res.redirect("/blogs",);
         }
     });
 });

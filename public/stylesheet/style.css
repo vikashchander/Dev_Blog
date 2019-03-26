@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Righteous');
+body{
+    font-family: 'Righteous', cursive;
+font-family: 'Bitter', serif;
+}
 .thumbnail img {
     width: 100%;
 }

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 textarea{
     resize: vertical;
 }
 
-=======
-textarea{
-    resize: vertical;
+.swal-wide{
+    width:850px !important;
+    height:500px !important;
 }
 
->>>>>>> 1bcc598c20616734f83a96a5cca5f771b7207bad

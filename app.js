@@ -1,5 +1,6 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
+    Swal = require("sweetalert2"),
     flash   =    require("connect-flash"),
     methodOverride = require("method-override"),
     config      = require("./utils/config").dbConfig,

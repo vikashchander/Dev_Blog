@@ -19,13 +19,14 @@
                         <em> Written By <i class="fas fa-pen-fancy"></i> <strong><%= blogs.author.username %></strong></em>
                     </p>
                 <% if( currentUser && blogs.author.id.equals(currentUser._id)){ %>
-                    <a class="btn btn-warning" href="/blogs/<%=blogs._id%>/edit"><i class="fas fa-pencil-alt"></i> Edit</a>
+                    <a onclick="editButton();" class="btn btn-warning" href="/blogs/<%=blogs._id%>/edit"><i class="fas fa-pencil-alt"></i> Edit</a>
                     <form id="form-delete" action="/blogs/<%= blogs._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger"><i class="fas fa-trash"></i> DELETE</button>
+                        <button onclick="deleteButton();" class="btn btn-danger"><i class="fas fa-trash"></i> DELETE</button>
                     </form>
                  <%  } %>
                 </div>
             </div>
+            
             <div class="well">
                 <div class="text-right">
                     <a class="btn btn-primary" href="/blogs/<%=blogs._id %>/comments/new"><i class="fas fa-comments"></i> Add New Comment</a>
@@ -45,8 +46,11 @@
                     </div>
                 <% }) %>
             </div>
+            <a href="/blogs">
+                <i class="fas fa-chevron-circle-left fa-3x"></i>
+            </a>
         </div>
-    </div>
+    </div> 
 </div>
 
 <% include ../partials/footer %>
