@@ -21,7 +21,7 @@ const oauthRoutes = require("./routes/oauth"),
  //connect to the mongoose DataBase
  mongoose.connect(config,{useNewUrlParser:true},()=>{
     console.log("connect to the database");
-})
+});
  
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
