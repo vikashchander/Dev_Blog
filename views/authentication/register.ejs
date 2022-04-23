@@ -11,21 +11,39 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-    <a href="/login"><h2 class="inactive underlineHover"> Sign In </h2></a>
-    <a href="/register"><h2 class="active  ">Sign Up </h2></a>
+    <a href="/login"><h2 class="inactive underlineHover">Sign In</h2></a>
+    <a href="/register"><h2 class="active">Sign Up</h2></a>
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="https://image.flaticon.com/icons/svg/1256/1256661.svg" id="icon" alt="User Icon" />
+      <img
+        src="https://cdn-icons.flaticon.com/png/512/863/premium/863782.png?token=exp=1650745283~hmac=6c82a5bb90e37f8b0a114a369340e9b6"
+        id="icon"
+        alt="User Icon"
+      />
     </div>
 
     <!-- Login Form -->
     <form action="/register" method="POST">
       <i class="fas fa-user fa-2x"></i>
-      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username" required>
-      <br>
+      <input
+        type="text"
+        id="login"
+        class="fadeIn second"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <br />
       <i class="fas fa-lock fa-2x"></i>
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+      <input
+        type="password"
+        id="password"
+        class="fadeIn third"
+        name="password"
+        placeholder="Password"
+        required
+      />
       <button class="fadeIn fourth btn btn-lg btn-primary">Sign Up</button>
       <!--<input type="submit" class="fadeIn fourth" value="Log In">-->
     </form>
@@ -35,7 +53,6 @@
       <!-- <a class="inactive underlineHover" href="#">Forgot Password?</a> -->
       <a href="/blogs"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></a>
     </div>
-
   </div>
 </div>
 <% include ../partials/footer %>
